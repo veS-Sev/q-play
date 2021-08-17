@@ -1,0 +1,17 @@
+
+section.banner 
+  .container 
+    .banner__inner 
+      .banner__content 
+        h1.banner__title=bannerTitle 
+        article.banner__article=bannerArticle 
+    .banner__social-box 
+    ul.banner__social-list
+      for i in ['VK', 'Instagram', 'Ё', 'Facebook'] 
+        li.banner__social-item 
+          a(href='#').banner__social-link= i
+      .banner__nav 
+        ul.banner__nav-list
+         for i in bannerNav  
+          li.banner__nav-imem 
+            a(href='#').banner__nav-link= i
