@@ -1,0 +1,11 @@
+section(class='top__'+className)
+  .container 
+    .top__inner 
+      .top__content 
+        h1.top__title=bannerTitle 
+        article.top__article=bannerArticle 
+      .top__social-box 
+        ul.top__social-list
+          for i in ['VK', 'Instagram', 'Ё', 'Facebook'] 
+            li.top__social-item 
+              a(href='#').top__social-link= i

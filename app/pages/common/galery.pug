@@ -1,0 +1,11 @@
+section(class="galery__"+className)
+  .container 
+    .galery__nav 
+      for i in galeryNav  
+        button(type='button' data-filter=i.filter).galery__nav-btn= i.name
+    
+  .galery-inner 
+    for i in galeryImages
+      a.galery__item-link.mix
+        img(src=i.url,alt= i.name, data-order=i.order).galery__item-img
+  button(type='button' data-filter='all').galery__nav-btn-all Посмотреть все кейсы
