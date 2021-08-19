@@ -1,0 +1,14 @@
+mixin achievementsItem(number, text)
+  .achievements__item
+    .achievements__number=number
+      .achievements__text=text
+section.achievements
+  .container
+    .achievements-inner 
+      +achievementsItem('10лет','на рынке')
+      +achievementsItem('350','успешных проектов')
+      +achievementsItem('112','логотипов')
+      +achievementsItem('74','фирменных стиля')
+      +achievementsItem('36','сайтов')
+      +achievementsItem('145','упаковок')
+      

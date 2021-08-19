@@ -1,0 +1,4 @@
+mixin socialLinks(section)
+  for i in [{link:'#', name:'VK'},{link:'#',name:'Instagram'},{link:'#',name:'Ё'}, {link:'#',name:'Facebook'}] 
+    li(class=section+'__social-item')
+      a(href=i.link,class=section+'__social-link')= i.name

@@ -1,3 +1,4 @@
+-var section = 'footer'
 footer.footer 
   .container 
     .footer__inner 
@@ -11,6 +12,11 @@ footer.footer
         .footer__working-online <span class="footer__working-online-check"></span>сейчас работаем
       .footer__social-box 
         ul.footer__social-list
-          for i in ['VK', 'Instagram', 'Ё', 'Facebook'] 
-            li.footer__social-item 
-              a(href='#').footer__social-link= i
+          +socialLinks('footer')
+          //- +socialLink('#','VK','footer')
+          //- +socialLink('#','Instagram','footer')
+          //- +socialLink('#','Ё','footer')
+          //- +socialLink('#','Facebook','footer')
+          //- for i in ['VK', 'Instagram', 'Ё', 'Facebook'] 
+          //-   li.footer__social-item 
+          //-     a(href='#').footer__social-link= i
