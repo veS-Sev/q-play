@@ -1,0 +1,18 @@
+extends common/layout
+
+block variables
+  include includes/brif/variables-brif
+
+block content 
+  form.brif__form
+    .container 
+      block page-1
+        include includes/brif/brif-form-page-1
+      block page-2
+        include includes/brif/brif-form-page-2
+      block page-3
+        include includes/brif/brif-form-page-3
+      block page-4
+        include includes/brif/brif-form-page-4
+    button(class='brif__form-next' id='nextBtn' type='button')
+    button(class='brif__form-submit' id='submitBtn' type='submit')

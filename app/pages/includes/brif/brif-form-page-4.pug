@@ -1,0 +1,12 @@
+-var pageNumber=4
+block page-4
+  div(class='tab brif__form-page-'+pageNumber )
+    +brifTop('О Компании')
+  ul.brif__form-points
+    +brifInput('firm','Компания','ООО «Адидас»')
+    +brifInput('person','Контактное лицо','Олег')
+    +brifInput('position','Должность','Владелец')
+    +brifInput('tel','Номер телефона','+7 999 999 99 99')
+    +brifInput('email','E-mail','boss@adidas.comег')
+    +brifCheckbox('connect','Предпочитаемый способ связи',['Telegram','Skype','WhatsApp','E-mail','Звонок','Встреча'])
+   

@@ -2,3 +2,40 @@ mixin socialLinks(section)
   for i in [{link:'#', name:'VK'},{link:'#',name:'Instagram'},{link:'#',name:'Ё'}, {link:'#',name:'Facebook'}] 
     li(class=section+'__social-item')
       a(href=i.link,class=section+'__social-link')= i.name
+//- for brif
+mixin brifTop(title)
+  h3.brif__form-tab-title=title
+  .brif__page-steps
+    each i in [1,2,3,4]
+      if(pageNumber===i) 
+        span.brif__page-step.active
+      else 
+        span.brif__page-step 
+mixin brifInput(point,title,example)
+  li(class='brif__form-point-'+pageNumber+'-'+point)
+    h4(class='brif__point-title-'+pageNumber+'-'+point)=title 
+    input(class='brif__point-'+pageNumber+'-'+point placeholder=example name='brif-'+pageNumber+'-'+point required)
+mixin brifTextarea(point,title,example)
+  li(class='brif__form-point-'+pageNumber+'-'+point)
+    h4(class='brif__point-title-'+pageNumber+'-'+point)=title 
+    textarea(class='brif__point-'+pageNumber+'-'+point placeholder=example name='brif-'+pageNumber+'-'+point required)
+mixin brifRadio(point,title,values)
+  li(class='brif__form-point-'+pageNumber+'-'+point)
+    h4(class='brif__point-title-'+pageNumber+'-'+point)=title
+    ul.brif__form-point-items
+      each val,index in values
+        -var indexNumber=index+1
+        li.brif__form-point-item
+          input(class='brif__page-radio-'+pageNumber+'-'+point type='radio' name='brif-'+pageNumber+'-'+point+'-'+indexNumber)
+          label(class='brif__page-label-'+pageNumber+'-'+point)=val
+mixin brifCheckbox(point,title,values)
+  li(class='brif__form-point-'+pageNumber+'-'+point)
+    h4(class='brif__point-title-'+pageNumber+'-'+point)=title
+    ul.brif__form-point-items
+      each val,index in values
+        -var indexNumber=index+1
+        li.brif__form-point-item
+          input(class='brif__page-checkbox-'+pageNumber+'-'+point type='checkbox' name='brif-'+pageNumber+'-'+point+'-'+indexNumber)
+          label(class='brif__page-label-'+pageNumber+'-'+point)=val
+
+    
