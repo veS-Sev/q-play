@@ -1,3 +1,14 @@
 @import "global";
 @import "vars";
-@import "fonts";
+
+// common elements
+@import "header";
+@import "galery";
+@import "footer";
+// pages
+@import "home";
+@import "photo";
+@import "progect";
+@import "brif-preview";
+@import "brif";
+

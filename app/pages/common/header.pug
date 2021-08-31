@@ -1,9 +1,34 @@
 header.header 
   .header__inner
-    |
-    |
     a.header__logo: img.header__logo-img(src='images/common/logo.svg')
-    |
-    |
     .header__burger-menu
+      .header__burger-menu-line-1 
+      .header__burger-menu-line-2
+      .header__burger-menu-line-3 
+    .heaader__nav-wrapper 
+      .container
+        nav.heaader__nav 
+          ul.heaader__nav-items 
+            li.heaader__nav-item
+              a(href="#" class='heaader__nav-item-link') Портфолио
+            li.heaader__nav-item
+              a(href="#" class='heaader__nav-item-link') Фото и 3D
+            li.heaader__nav-item
+              a(href="#" class='heaader__nav-item-link') Бриф
+                ul.heaader__nav-item-extra
+                  li.heaader__nav-item-extra-point Фирменный стиль                     
+                  li.heaader__nav-item-extra-point Логотип 
+                  li.heaader__nav-item-extra-point Упаковка
+                  li.heaader__nav-item-extra-point Сайт
+                  li.heaader__nav-item-extra-point Дизайн макет  
+            li.heaader__nav-item
+              a(href="#" class='heaader__nav-item-link') Вопросы
+            li.heaader__nav-item
+              a(href="#" class='heaader__nav-item-link')  For free 
+        ul.header__social-block
+          li(class='header__social-item')
+            a(href="tel:" class='header__social-link')
+          +socialLinks('header')
+
+
     a(href='#').header__phone
