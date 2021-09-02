@@ -22,6 +22,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 400;
+  line-height: 27px;
+  scroll-behavior: smooth;
 }
 li{
   list-style: none;
@@ -30,6 +32,7 @@ li{
 button{
    outline: none;
   border: none;
+  cursor: pointer;
   &:focus-visible,
   &:active,
   &:visited,
@@ -57,4 +60,12 @@ button{
 }
 .container-fluid{
   max-width: 1920px;
+}
+li[class$="__social-item"]{
+  font-size: 0;
+}
+h3[class$="__title"]{
+  text-transform: uppercase;
+  @include fz32;
+  font-weight: 300;
 }

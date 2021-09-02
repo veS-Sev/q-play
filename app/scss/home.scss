@@ -1,0 +1,228 @@
+// features start
+.features {
+  padding: 150px 0;
+}
+.container {
+}
+.features__title {
+  margin-bottom: 40px;
+}
+.features__inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.features__item {
+  max-width: calc(50% - 30px);
+  margin-left: 30px;
+  min-height: 200px;
+  overflow-x: hidden;
+  &:first-child {
+    .features__item-title {
+      color: $accent;
+    }
+  }
+}
+.features__item-title {
+  padding-right: 20px;
+  position: relative;
+  margin-bottom: 15px;
+  @include fz20;
+  &:after {
+    @include be-af;
+    height: 1px;
+    width: 100%;
+    max-width: 100%;
+    background-color: $accent;
+    top: 50%;
+    margin-left: 20px;
+  }
+}
+.features__item-text {
+  padding-right: 10px;
+}
+// features end
+
+// achievements start
+.achievements {
+  padding: 0 0 150px 0;
+}
+
+.achievements__title {
+  margin-bottom: 40px;
+}
+.achievements-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  align-items: center;
+}
+.achievements__item {
+  margin-left: 20px;
+  width: 100%;
+  max-width: calc(33.33% - 20px);
+  margin-bottom: 80px;
+}
+.achievements__number {
+  color: $accent;
+  @include fz48;
+}
+.achievements__text {
+}
+// achievements end
+
+// banner start
+.banner {
+  padding-top: 36px;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  &::before {
+    position: absolute;
+    background-repeat: no-repeat;
+    content: url(../images/home/banner/banner-dеvice.png);
+    top: 0px;
+    width: 494px;
+    height: 517px;
+    z-index: 10;
+    left: 50%;
+    right: 50%;
+  }
+  &::after {
+    position: absolute;
+    content: url(../images/home/banner/banner-round.png);
+    width: 316px;
+    height: 316px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    z-index: 20;
+  }
+}
+.banner__bgr-wrap {
+  min-height: 434px;
+  max-height: 434px;
+}
+.banner__bgr-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scale(2);
+}
+.banner__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 77px 0;
+  color: #000;
+  .container {
+  }
+}
+h3.banner__title {
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+.banner__text {
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+.banner__btn {
+  width: 222px;
+  height: 56px;
+  background-color: transparent;
+  border: 1px solid #000;
+}
+// banner end
+
+// clients start
+.clients {
+  padding: 150px 0;
+}
+.clients__title {
+}
+.clients__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.clients__inner-wrap-logo {
+  max-width: 14.2857%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clients__inner-logo-1 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 0px 3px;
+}
+.clients__inner-logo-2 {
+  width: 120px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 1000px 7px;
+}
+.clients__inner-logo-3 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 836px 3px;
+}
+.clients__inner-logo-4 {
+  width: 120px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 636px 3px;
+}
+.clients__inner-logo-5 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 456px 3px;
+}
+.clients__inner-logo-6 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 262px 3px;
+}
+.clients__inner-logo-7 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 100px 3px;
+}
+.clients__inner-logo-8 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 0px 55px;
+}
+.clients__inner-logo-9 {
+  width: 120px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 1006px 56px;
+}
+.clients__inner-logo-10 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 826px 56px;
+}
+.clients__inner-logo-11 {
+  width: 140px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 648px 55px;
+}
+.clients__inner-logo-12 {
+  width: 120px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 437px 57px;
+}
+.clients__inner-logo-13 {
+  width: 100px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 276px 56px;
+}
+.clients__inner-logo-14 {
+  width: 150px;
+  height: 57px;
+  background: url("../images/home/clients/clients-logo-all.png") 152px 56px;
+}
+// clients end

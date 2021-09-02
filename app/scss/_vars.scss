@@ -1,1 +1,47 @@
 $accent:#00B9D2;
+$gray:#4F4F4F;    
+
+@mixin be-af{
+content:"";
+position:absolute;
+}
+//for font-sizes
+@mixin fz48{
+  font-size: 48px;
+  line-height: 58px;
+}
+@mixin fz32{
+  font-size: 32px;
+  line-height: 38px;
+}
+@mixin fz22{
+  font-size: 22px;
+  line-height: 26px;
+}
+@mixin fz20{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+}
+@mixin fz16{
+  font-size: 16px;
+  line-height: 27px;
+}
+// for social-links
+@mixin vk{
+  width: 24px; height: 14px;
+  background: url('../images/common/common-icons.png') -118px -10px;
+}
+@mixin insta {
+  width: 26px; height: 26px;
+  background: url('../images/common/common-icons.png') -72px -10px;
+}
+@mixin be{
+  width: 26px; height: 17px;
+  background: url('../images/common/common-icons.png') -54px -72px;
+}
+@mixin facebook{
+  width: 24px; height: 24px;
+  background: url('../images/common/common-icons.png') -10px -72px;
+ 
+}

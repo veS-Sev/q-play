@@ -1,0 +1,39 @@
+.galery__nav {
+  display: flex;
+  justify-content: space-around;
+}
+.galery__nav-btn {
+  padding: 25px;
+  width: 100%;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: $gray;
+  @include fz22;
+}
+.galery__nav-btn.mixitup-control-active {
+  color: $accent;
+}
+div[class^="galery__inner-"] {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.galery__item-link {
+  max-width: 25%;
+  width: 100%;
+}
+.galery__item-img {
+  width: 100%;
+  display: block;
+}
+.galery__nav-btn-all-wrap {
+  @extend .container;
+  border-bottom: 1px solid #fff;
+}
+.galery__nav-btn-all {
+  @extend .galery__nav-btn;
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+}

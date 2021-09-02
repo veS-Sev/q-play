@@ -8,4 +8,5 @@ section(class="galery__"+className)
     for i in galeryImages
       a(class='galery__item-link mix category-'+i.category data-order=i.order)
         img(src=i.url,alt= i.alt).galery__item-img
-  button(type='button' data-filter='all').galery__nav-btn-all Посмотреть все кейсы
+  .galery__nav-btn-all-wrap
+    button(type='button' data-filter='all').galery__nav-btn-all Посмотреть все кейсы

@@ -1,7 +1,7 @@
 mixin socialLinks(section)
   for i in [{link:'#', name:'VK'},{link:'#',name:'Instagram'},{link:'#',name:'Be'}, {link:'#',name:'Facebook'}] 
     li(class=section+'__social-item')
-      a(href=i.link,class=section+'__social-link')= i.name
+      a(href=i.link,class=section+'__social-link-'+i.name)= i.name
 //- for brif
 mixin brifTop(title)
   h3.brif__form-tab-title=title
@@ -14,7 +14,7 @@ mixin brifTop(title)
 mixin brifInput(point,title,example)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title 
-    input(class='brif__'+pageNumber+'-'+point+'-input' placeholder=example name='brif-'+pageNumber+'-'+point required)
+    input(class='brif__'+pageNumber+'-'+point+'-input' placeholder=example name='brif-'+pageNumber+'-'+point required type='text' autocomplete='off')
 mixin brifTextarea(point,title,example)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title 

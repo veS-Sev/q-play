@@ -1,20 +1,37 @@
 .header {
 }
 .header__inner {
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo-menu-wrapper{
+display: flex;
 }
 .header__logo {
 }
 .header__logo-img {
 }
-.header__burger-menu {
+button.header__burger-menu {
+  margin-left: 5px;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: transparent;
 }
-.header__burger-menu-line-1 {
-}
-.header__burger-menu-line-2 {
-}
-.header__burger-menu-line-3 {
+.header__burger-menu-line {
+  width: 18px;
+  height: 1px;
+  background-color: #fff;
+  &:last-child{
+    width: 12px;
+  }
 }
 .heaader__nav-wrapper {
+  display:none;
 }
 .container {
 }
@@ -33,10 +50,24 @@
 .header__social-block {
 }
 .header__social-item {
+  
 }
-.header__social-link {
+.header__social-link-VK {
+ @include vk;
+}
+.header__social-link-Instagram {
+ @include insta; 
+}
+.header__social-link-Be {
+@include be;
+}
+.header__social-link-Facebook {
+ @include facebook;
 }
 .header__phone {
+  width: 42px; 
+  height: 42px;
+  background: url('../images/common/common-icons.png') -10px -10px;
 }
 .bg-clock {
   width: 16px; height: 17px;

@@ -1,9 +1,10 @@
 mixin achievementsItem(number, text)
   .achievements__item
     .achievements__number=number
-      .achievements__text=text
+    .achievements__text=text
 section.achievements
   .container
+    h3.achievements__title Почему нас выбирают
     .achievements-inner 
       +achievementsItem('10лет','на рынке')
       +achievementsItem('350','успешных проектов')
