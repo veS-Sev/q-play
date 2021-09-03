@@ -45,3 +45,9 @@ position:absolute;
   background: url('../images/common/common-icons.png') -10px -72px;
  
 }
+@mixin icon{
+  @include be-af;
+  left:0;
+  top:10px;
+  width: 16px; height: 17px;
+}

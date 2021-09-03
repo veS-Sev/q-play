@@ -64,8 +64,16 @@ button{
 li[class$="__social-item"]{
   font-size: 0;
 }
-h3[class$="__title"]{
+h3,h4[class$="__title"]{
   text-transform: uppercase;
   @include fz32;
   font-weight: 300;
+}
+address{
+  font-style: normal;
+}
+ul{
+ padding-inline-start:0;
+ margin-block-start:0;
+ margin-block-end:0;
 }
