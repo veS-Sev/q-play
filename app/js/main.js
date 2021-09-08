@@ -1,9 +1,7 @@
-
 $(function(){
 
 var canvas = document.getElementById('banner__bgr-canvas');
 var ctx = canvas.getContext('2d');
-console.log(ctx);
 function Pixel( x, y ) {
   this.x = x;
   this.y = y;
