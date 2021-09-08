@@ -1,10 +1,11 @@
-section(class="galery__"+className)
+section(class="galery__"+className data-ref='galery__inner-'+className
+)
   .container 
     .galery__nav 
       for i in galeryNav  
         button(type='button' data-filter='.category-'+i.filter).galery__nav-btn= i.name
     
-  div(class='galery__inner-'+className)
+  div(class='galery__inner-'+className )
     for i in galeryImages
       a(class='galery__item-link mix category-'+i.category data-order=i.order)
         img(src=i.url,alt= i.alt).galery__item-img

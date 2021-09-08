@@ -1,8 +1,9 @@
+
 $(function(){
-var canvas = document.querySelector('canvas');
+
+var canvas = document.getElementById('banner__bgr-canvas');
 var ctx = canvas.getContext('2d');
-
-
+console.log(ctx);
 function Pixel( x, y ) {
   this.x = x;
   this.y = y;
@@ -38,8 +39,26 @@ function animate() {
 
 animate();
 
+var container1 = document.querySelector('.galery__photo');
+var mixerOne = mixitup(container1,{
+  controls: {
+      scope: 'local'
+  }
+});
+
+var container2 = document.querySelector('.galery__home');
+var mixerTwo = mixitup(container2, {
+  controls: {
+      scope: 'local'
+  }
+});
+var container3 = document.querySelector('.products');
+
+var mixerThree = mixitup(container3,{
+  controls: {
+      scope: 'local'
+  }
+});
 
 
-  var mixer = mixitup('.galery__inner-home,.galery__inner-photo');
-
-})
+});

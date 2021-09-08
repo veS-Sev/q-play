@@ -1,0 +1,34 @@
+//products start 
+.products {
+}
+.container {
+ 
+}
+.products__nav {
+  @extend .galery__nav;
+}
+.products__nav-btn {
+  @extend .galery__nav-btn;
+}
+.products__nav-btn.mixitup-control-active{
+  @extend .galery__nav-btn.mixitup-control-active;
+}
+.products__items {
+  @extend div[class^="galery__inner-"];
+  // flex-wrap: nowrap;
+}
+.products__item-link {
+  max-width: 50%;
+  width: 100%;
+}
+
+.products__item-img {
+  @extend .galery__item-img;
+}
+.products__nav-btn-all-wrap {
+  @extend .galery__nav-btn-all-wrap;
+}
+.products__nav-btn-all {
+  @extend .galery__nav-btn-all;
+}
+//products end 

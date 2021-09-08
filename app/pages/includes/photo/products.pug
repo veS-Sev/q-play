@@ -1,19 +1,16 @@
-section.products
+section.products(data-ref='products' id='products__items')
   .container
-    h3.products__title 3D Модделинг
-    dl.products__tabs 
-      dt.products__tab-title.active Логотипы
-      dd.products__tab-content.active 
-        img.products__tab-content-img(src='images/photo/products/products-img-1.jpg' alt='')
-        img.products__tab-content-img(src='images/photo/products/products-img-2.jpg' alt='')
-      dt.products__tab-title Продукция
-      dd.products__tab-content
-        img.products__tab-content-img(src='#' alt='')
-        img.products__tab-content-img(src='#' alt='')
-      dt.products__tab-title Анимация
-      dd.products__tab-content
-        img.products__tab-content-img(src='#' alt='')
-        img.products__tab-content-img(src='#' alt='')
+    .products__nav
+      for i in productsNav  
+        button(type='button' data-filter='.category-'+i.filter).products__nav-btn= i.name
+    
+    div(class='products__items')
+      for i in productsImages
+        a(class='products__item-link mix category-'+i.category data-order=i.order)
+          img(src=i.url,alt= i.alt).products__item-img
+    .products__nav-btn-all-wrap
+      button(type='button' data-filter='all').products__nav-btn-all посмотреть все работы
+   
         
   
   
