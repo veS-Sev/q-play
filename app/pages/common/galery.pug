@@ -6,7 +6,13 @@ section(class="galery__"+className)
     
   div(class='galery__inner-'+className )
     for i in galeryImages
-      a(class='galery__item-link mix category-'+i.category data-order=i.order)
+      //- для каждого объекта данных в galeryImages создаем массив в который будем складывать названия классов. Oбращаемся к каждому элементу массива находящегося в category. Приклеиваем его значение к 'category-'.И отправляем полученное в массив classCategory. Полученные классы отправляем к уже имеющимся классам для а
+      -var classCategory =[]  
+      for v in i.category 
+        -var names=classCategory.push('category-'+v)
+      a(data-order=i.order, class=[
+        'galery__item-link','mix', classCategory]       
+      )
         img(src=i.url,alt= i.alt).galery__item-img
   .galery__nav-btn-all-wrap
     button(type='button' data-filter='all').galery__nav-btn-all Посмотреть все кейсы

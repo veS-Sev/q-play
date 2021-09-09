@@ -4,9 +4,9 @@ $(function(){
     controls: {
         scope: 'local'
     },
-    load: {
-      filter: '.category-a'
-  }
+  //   load: {
+  //     filter: '.category-a'
+  // }
   });
 
 var canvas = document.getElementById('banner__bgr-canvas');
