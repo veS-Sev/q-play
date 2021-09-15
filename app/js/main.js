@@ -1,64 +1,121 @@
-// $(function(){
-//   var container1 = document.querySelector('.galery__photo');
-//   var mixerOne = mixitup(container1,{
-//     controls: {
-//         scope: 'local'
-//     }
-//   });
+$(function () {
+  $('input, select').styler();
+  $('#brif__addfile').styler('destroy');
+
+  $('.header__burger-menu').click(()=>{
+    console.log('ha');
+    $('.heaader__nav-wrapper').toggle('slow');
+  });
+ 
+let textareas=document.querySelectorAll('textarea');
+for (var i = 0; i < textareas.length; i++) {
+textareas[i].setAttribute('style', 'height:' + (textareas[i].scrollHeight)+'px;overflow-y:hidden;');
+textareas[i].addEventListener("input", OnInput, false);
+ }
   
-//   var container2 = document.querySelector('.galery__home');
-//   var mixerTwo = mixitup(container2, {
-//     controls: {
-//         scope: 'local'
+  function OnInput() {
+  this.style.height = 'auto';
+  this.style.height = (this.scrollHeight) + 'px';
+  }
+
+
+document.querySelectorAll('textarea').forEach((elem) => {
+  // console.dir(elem);
+  elem.style.height = elem.scrollHeight + 10 + "px";
+    elem.addEventListener('input', (e) => {
+     e.target.style.height = e.target.scrollHeight + 10 + "px";
+     console.log(e.target);
+    e.target.style.height = 'auto';
+    e.target.style.color = 'red';
+  })
+})
+
+let files=document.querySelector('#brif__addfile');
+let field = document.querySelector('#field');
+let addBtn = document.getElementById('brif__addfile-btn');
+
+
+addBtn.addEventListener('click',()=>files.click());
+files.addEventListener('change',function(){
+  field.textContent += this.value;
+});
+
+// TABS
+let prevBtn= document.getElementById("prevBtn"),
+    nextBtn = document.getElementById("nextBtn"),
+    tabs=document.getElementsByClassName("tab");
+
+var currentTab = 0; // Текущая вкладка будет первой вкладкой (0)
+showTab(currentTab); // Отображение текущей вкладки
+
+
+function showTab(n) {
+  // Эта функция отобразит указанную вкладку формы ...
+  // var x = document.getElementsByClassName("tab");
+  // console.log(x);
+  tabs[n].style.display = "block";
+  console.log(tabs[n]);
+  console.log(prevBtn);
+  // ... и зафиксируйте кнопки Назад/Вперед:
+  if (n == 0) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "inline";
+  }
+  if (n == (tabs.length - 1)) {
+    nextBtn.innerHTML = "Отправить";
+  } else {
+    nextBtn.innerHTML = "Вперед";
+  }
+}
+
+function nextPrev(n) {
+  // Эта функция определит, какую вкладку отображать
+  // var x = document.getElementsByClassName("tab");
+  // console.log(x);
+  // Выйдите из функции, если какое-либо поле на вкладке текущий является недопустимым:
+  // if (n == 1 && !validateForm()) return false;
+  // if (n == 1) return false;
+  // Скрыть текущую вкладку:
+  tabs[currentTab].style.display = "none";
+  // Увеличение или уменьшение текущей вкладки на 1:
+  currentTab = currentTab + n;
+  // если вы дошли до конца формы... :
+  if (currentTab >= tabs.length) {
+    //...форма будет отправлена:
+    document.getElementById("brif-form").submit();
+    return false;
+  }
+  // В противном случае отобразите правильную вкладку:
+  showTab(currentTab);
+}
+
+// function validateForm() {
+//   // Эта функция занимается проверкой полей формы
+//   var x, y, i, valid = true;
+//   x = document.getElementsByClassName("tab");
+//   y = x[currentTab].getElementsByTagName("input");
+//   // Цикл, который проверяет каждое поле ввода на текущей вкладке:
+//   for (i = 0; i < y.length; i++) {
+//     // Если поле пустое...
+//     if (y[i].value == "") {
+//       // добавьте в поле "invalid" класс:
+//       y[i].className += " invalid";
+//       // и установите текущий допустимый статус в false:
+//       valid = false;
 //     }
-//   });
-//   var container3 = document.querySelector('.products');
-  
-//   var mixerThree = mixitup(container3,{
-//     controls: {
-//         scope: 'local'
-//     }
-//   });
-
-
-// var canvas = document.getElementById('banner__bgr-canvas');
-// var ctx = canvas.getContext('2d');
-// function Pixel( x, y ) {
-//   this.x = x;
-//   this.y = y;
-//   this.hue = Math.floor( Math.random() * 360 );
-//   var direction = Math.random() > 0.5 ? -1 : 1;
-//   this.velocity = ( Math.random() * 30 + 20 ) * 0.01 * direction;
+//   }
+//   // Если действительный статус равен true, отметьте шаг как завершенный и действительный:
+//   if (valid) {
+//     document.getElementsByClassName("step")[currentTab].className += " finish";
+//   }
+//   return valid; // верните действительный статус
 // }
 
-// Pixel.prototype.update = function() {
-//   this.hue += this.velocity;
-// };
 
-// Pixel.prototype.render = function( ctx ) {
-//   var hue = Math.round( this.hue );
-//   ctx.fillStyle = 'hsl(' + hue + ', 100%, 50% )';
-//   ctx.fillRect( this.x, this.y, 1, 1 );
-// }
-
-// var pixels = [
-//   new Pixel( 0, 0 ),
-//   new Pixel( 1, 0 ),
-//   new Pixel( 0, 1 ),
-//   new Pixel( 1, 1 ),
-// ];
-
-// function animating() {
-//   pixels.forEach( function( pixel ) {
-//     pixel.update();
-//     pixel.render( ctx );
-//   });
-//   requestAnimationFrame( animating );
-// }
-
-// animating();
+});
 
 
 
 
-// });
+

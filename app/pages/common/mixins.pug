@@ -4,13 +4,15 @@ mixin socialLinks(section)
       a(href=i.link,class=section+'__social-link-'+i.name)= i.name
 //- for brif
 mixin brifTop(title)
-  h3.brif__form-tab-title=title
+  h3.brif__page-title=title
   .brif__page-steps
     each i in [1,2,3,4]
       if(pageNumber===i) 
         span.brif__page-step.active
       else 
         span.brif__page-step 
+  div(class='brif__page-number')=pageNumber+'из 4'
+
 mixin brifInput(point,title,example)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title 
@@ -18,32 +20,31 @@ mixin brifInput(point,title,example)
 mixin brifTextarea(point,title,example)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title 
-    textarea(class='brif__'+pageNumber+'-'+point+'-textarea' placeholder=example name='brif-'+pageNumber+'-'+point required)
+    textarea(class='brif__'+pageNumber+'-'+point+'-textarea' placeholder=example name='brif-'+pageNumber+'-'+point required maxlength="500")
 mixin brifRadio(point,title,values)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title
-    ul(class='brif__'+point+'-items')
+    ul(class='brif__'+pageNumber+'-'+point+'-items')
       each val,index  in values
-        li(class='brif__'+point+'-item')
+        li(class='brif__'+pageNumber+'-'+point+'-item')
           if(point==='logo-style')
             input(class='brif__'+pageNumber+'-'+point+'-radio' type='radio' name='brif-'+pageNumber+'-'+point+'-'+index)
             label(class='brif__'+pageNumber+'-'+point+'-radio-label')=val.name
-            div(class='brif__'+pageNumber+point+'-radio-logo-style-wrap')
+            div(class='brif__'+pageNumber+'-'+point+'-radio-wrap')
               for k in [1,2,3,4]
                 img(class='brif__'+pageNumber+'-'+point+'-radio-img' src='images/brif/logo-style/brif-logo-style-img-'+val.url+'-'+k+'.jpg')
           else if(point==='music')
-            input(class='brif__'+pageNumber+'-'+point+'-radio' type='radio' name='brif-'+pageNumber+'-'+point+'-'+index)
+            input(class='brif__'+pageNumber+'-'+point+'-radio' type='radio' name='brif-'+pageNumber+'-'+point)
             label(class='brif__'+pageNumber+'-'+point+'-radio-label')=val.name
             img(class='brif__'+pageNumber+'-'+point+'-radio-img' src='images/brif/music/brif-music-img-'+val.url+'.jpg')
           else 
-            input(class='brif__'+pageNumber+'-'+point+'-radio' type='radio' name='brif-'+pageNumber+'-'+point+'-'+index)
+            input(class='brif__'+pageNumber+'-'+point+'-radio' type='radio' name='brif-'+pageNumber+'-'+point)
             label(class='brif__'+pageNumber+'-'+point+'-radio-label')=val
 mixin brifCheckbox(point,title,values)
   li(class='brif__'+pageNumber+'-'+point)
     h4(class='brif__'+pageNumber+'-'+point+'-title')=title
-    ul.brif__form-point-items
+    ul(class='brif__'+pageNumber+'-'+point+'-items')
       each val,index in values
-        -var indexNumber=index+1
-        li.brif__form-point-item
-          input(class='brif__'+pageNumber+'-'+point+'-checkbox' type='checkbox' name='brif-'+pageNumber+'-'+point+'-checkbox'+indexNumber)
+        li(class='brif__'+pageNumber+'-'+point+'-item')
+          input(class='brif__'+pageNumber+'-'+point+'-checkbox' type='checkbox' name='brif-'+pageNumber+'-'+point+'-checkbox'+index)
           label(class='brif__'+pageNumber+'-'+point+'-checkbox-label')=val

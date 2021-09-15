@@ -1,0 +1,236 @@
+.brif__form {
+  background-image: radial-gradient(rgba($accent, 0.25), #000);
+  input[type="text"] {
+    background-color: transparent;
+    color: #fff;
+    max-width: 100%;
+    width: 100%;
+    
+  }
+  textarea {
+    @extend input[type="text"];
+    padding: 18px;
+    min-height: 70px;
+    height: auto;
+    resize: none;
+    border: 1px solid #666;
+    overflow: auto;
+     &::placeholder {
+     color: #fff;
+     opacity: 0.9;
+    }
+
+  }
+  .jq-radio {
+    width: 15px;
+    height: 15px;
+
+    &.checked,
+    &.focused {
+      border: 1px solid #fff;
+    }
+  }
+  .jq-radio.checked .jq-radio__div {
+    background-color: $accent;
+    width: 5px;
+    height: 5px;
+    margin: 4px 0 0 4px;
+    box-shadow: none;
+  }
+  .jq-checkbox {
+    border-radius: 0px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .jq-checkbox,
+  .jq-radio {
+    vertical-align: -2px;
+    margin: 0 10px 0 0;
+    border: 1px solid #fff;
+    background: transparent;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  .jq-checkbox.checked .jq-checkbox__div {
+    width: 10px;
+    height: 7px;
+    margin: 3px 0 0 4px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+  .jq-checkbox.checked {
+    background-color: $accent;
+
+    border: transparent;
+  }
+}
+.brif__container {
+  max-width: 770px;
+  width: 100%;
+  margin: 0 auto;
+}
+.brif__page-title {
+  text-align: center;
+}
+.brif__page-steps {
+  display: flex;
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto;
+}
+.brif__page-step {
+  max-width: 25%;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 25px;
+  &.active {
+    background-color: $accent;
+  }
+}
+.brif__page-number {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+li[class^="brif__"] {
+  margin-bottom: 55px;
+}
+h4[class^="brif__"] {
+  color: $accent;
+  @include fz20;
+  margin-bottom: 35px;
+}
+.brif__2-gender-items {
+  display: flex;
+}
+.brif__2-gender-item + .brif__2-gender-item {
+  margin-left: 40px;
+}
+.brif__2-ages-items {
+  display: flex;
+}
+.brif__2-ages-item + .brif__2-ages-item {
+  margin-left: 40px;
+}
+
+.brif__2-guide-items {
+  display: flex;
+}
+.brif__2-guide-item + .brif__2-guide-item {
+  margin-left: 40px;
+}
+.brif__3-music-items {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.brif__3-music-item {
+  max-width: calc(50% - 30px);
+  width: 100%;
+  margin-left: 30px;
+  margin-bottom: 50px;
+ }
+.brif__3-music-radio-label {
+  margin-bottom: 25px;
+  display: inline-block;
+}
+.brif__3-logo-style-radio-label {
+  @extend .brif__3-music-radio-label;
+}
+.brif__3-logo-style-radio-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.brif__3-add-wrap {
+  max-width: 100%;
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #666;
+}
+// TEST FIELD
+#field {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  color:green;
+}
+//
+.brif__3-addlinks {
+  background: transparent;
+  height: 100%;
+  border: none;
+  width: 100%;
+  max-width: 590px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  color: #666;
+}
+.jq-file {
+  max-width: 180px;
+  width: 100%;
+  border-radius: 0;
+}
+.brif__3-addfile{
+display: none;
+}
+  .brif__3-addfile-btn{
+    background: #666;
+    position: relative;
+    top: 0;
+    right: 0;
+    color: #fff;
+    height: 100%;
+    border-radius: 0%;
+    border: none;
+    max-width: 180px;
+    width: 100%;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brif__search-icon{
+    display:inline-block;
+    background-image: url(../images/brif/brif-search-icon.svg);
+    width: 20px;height: 20px;
+    margin-right: 5px;
+  }
+
+
+.tab {
+  display:none;
+ }
+input[class^="brif__4-"]{
+  border:1px solid $box;
+  box-shadow: none;
+  padding:13px 19px;
+  min-height: 53px;
+
+}
+
+.brif__checkbox-privacy-wrap{
+  border-top:1px solid $box;
+  padding-top:45px;
+}
+.brif__page-btn-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brif__page-next,
+.brif__page-prev {
+  background:transparent;
+  color:#fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 270px;
+  height: 56px;
+  width: 100%;
+  border:1px solid #fff;
+  margin:110px auto 100px;
+}

@@ -2,11 +2,14 @@
 block page-3
   div(class='tab brif__form-page-'+pageNumber )
     +brifTop(' О Графике')
-  ul.brif__form-points
-    +brifRadio('music','Представьте, что логотип музыкальное произведение, к какому жанру вы его отнесете?',[{name:'классика',url:'1'},{name:'поп-музыка',url:'2'},{name:'электронная',url:'3'},{name:'рок',url:'4'},{name:'хип-хоп',url:'5'}])
-    +brifRadio('logo-style','Какой СТИЛЬ/МЕТОД ГРАФИЧЕСКОГО РЕШЕНИЯ логотипа, на ваш взгляд, предпочтителен для создания желаемого образа бренда? ВЫБЕРИТЕ НЕ БОЛЕЕ 3.',[{name:'Минимализм',url:'1'},{name:'Корпоративность, абстракция, геометрия',url:'2'},{name:'Прямолинейность',url:'3'},{name:'Типографика, фирменное написание',url:'4'},{name:'Рисование, художественность',url:'5'},{name:'Каллиграфия',url:'6'},{name:'Историчность, мифологичность',url:'7'},{name:'Детскость, намеренный инфантилизм, юмор',url:'8'}])
-    +brifTextarea('colors','Цветовая гамма','Цвета, желательные или обязательные для использования. Если есть нежелательные цвета, то также укажите их. ')
-    li(class='brif__form-point-'+pageNumber+'-referense')
-      h4(class='brif__point-title-'+pageNumber+'-referense')='Референсы'
-      input(id='brif__point-file-links' placeholder='Приложите ссылки или добавьте сохраненные файлы (до 10 штук) ' ).brif__point-file-links 
-      input(type='file' id='brif__point-file' multiple).brif__point-file
+    ul.brif__form-points
+      +brifRadio('music','Представьте, что логотип музыкальное произведение, к какому жанру вы его отнесете?',[{name:'классика',url:'1'},{name:'поп-музыка',url:'2'},{name:'электронная',url:'3'},{name:'рок',url:'4'},{name:'хип-хоп',url:'5'}])
+      +brifRadio('logo-style','Какой СТИЛЬ/МЕТОД ГРАФИЧЕСКОГО РЕШЕНИЯ логотипа, на ваш взгляд, предпочтителен для создания желаемого образа бренда? ВЫБЕРИТЕ НЕ БОЛЕЕ 3.',[{name:'Минимализм',url:'1'},{name:'Корпоративность, абстракция, геометрия',url:'2'},{name:'Прямолинейность',url:'3'},{name:'Типографика, фирменное написание',url:'4'},{name:'Рисование, художественность',url:'5'},{name:'Каллиграфия',url:'6'},{name:'Историчность, мифологичность',url:'7'},{name:'Детскость, намеренный инфантилизм, юмор',url:'8'}])
+      +brifTextarea('colors','Цветовая гамма','Цвета, желательные или обязательные для использования. Если есть нежелательные цвета, то также укажите их. ')
+      li(class='brif__'+pageNumber+'-referense')
+        h4(class='brif__'+pageNumber+'-referense-title')='Референсы'
+        div(class='brif__'+pageNumber+'-add-wrap')
+          input(id='brif__addlinks' class='brif__'+pageNumber+'-addlinks' type='url' placeholder='Приложите ссылки или добавьте сохраненные файлы (до 10 штук)')
+          input(type='file' id='brif__addfile' class='brif__'+pageNumber+'-addfile' placeholder='Добавить' multiple) 
+          button(id='brif__addfile-btn' class='brif__'+pageNumber+'-addfile-btn' type='button') <span class="brif__search-icon"></span> Добавить
+        #field

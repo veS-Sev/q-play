@@ -4,12 +4,13 @@ section.products
       for i in productsNav  
         button(type='button' data-filter='.category-'+i.filter).products__nav-btn= i.name
     
-    div(class='products__items')
+  div(class='products__items')
+    .container
       for i in productsImages
         a(class='products__item-link mix category-'+i.category data-order=i.order)
           img(src=i.url,alt= i.alt).products__item-img
-    .products__nav-btn-all-wrap
-      button(type='button' data-filter='all').products__nav-btn-all посмотреть все работы
+  .products__nav-btn-all-wrap
+    button(type='button' data-filter='all').products__nav-btn-all посмотреть все работы
    
         
   

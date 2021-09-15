@@ -29,9 +29,9 @@ li{
   list-style: none;
   box-sizing:border-box;
 }
-button{
-   outline: none;
-  border: none;
+button, 
+textarea{
+  outline: none;
   cursor: pointer;
   &:focus-visible,
   &:active,
@@ -40,6 +40,9 @@ button{
   &:focus-within {
     outline: none;
   }
+}
+button{
+  border: none;
 }
 .wrapper {
   display: flex;
@@ -68,6 +71,8 @@ h1,h3,h4[class$="__title"]{
   text-transform: uppercase;
   @include fz32;
   font-weight: 300;
+  margin:0;
+  margin-bottom: 35px;
 }
 address{
   font-style: normal;

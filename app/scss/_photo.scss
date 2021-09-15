@@ -1,5 +1,23 @@
+// modeling start
+.modeling {
+  background-image: url(../images/photo/modeling/modeling-img.jpg);
+  background-repeat: no-repeat;
+  padding: 70px 0 100px 0;
+  // background-position: bottom;
+  background-size:cover;
+}
+.container {
+}
+.modeling__title {
+}
+.modeling__article {
+  max-width: 520px;
+}
+// modeling end
+
 //products start 
 .products {
+  
 }
 .container {
  
@@ -15,8 +33,9 @@
 }
 .products__items {
   @extend div[class^="galery__inner-"];
-  // flex-wrap: nowrap;
-}
+  background-color:$lgray;
+  padding-bottom: 165px;
+ }
 .products__item-link {
   max-width: 50%;
   width: 100%;
@@ -26,6 +45,7 @@
   @extend .galery__item-img;
 }
 .products__nav-btn-all-wrap {
+  
   @extend .galery__nav-btn-all-wrap;
 }
 .products__nav-btn-all {

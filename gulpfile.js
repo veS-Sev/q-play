@@ -53,6 +53,7 @@ function scripts(){
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/mixitup/dist/mixitup.js',
+    'node_modules/jquery-form-styler/dist/jquery.formstyler.js'
     // 'app/js/home.js',
     // 'app/js/photo.js',
     // 'app/js/main.js'
@@ -66,6 +67,8 @@ function scripts(){
 function styles(){
   return src([
      'node_modules/normalize.css/normalize.css',
+     'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+     'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
      'app/scss/style.scss'])
     .pipe(scss({outputStyle:'compressed'}))
     .pipe(concat('style.min.css'))

@@ -32,22 +32,46 @@ button.header__burger-menu {
 }
 .heaader__nav-wrapper {
   display:none;
+  position: absolute;
+  z-index:100;
+  top:0;
+  bottom:0;
+  right: 0;
+  left:0;
+  background-color: #000;
+  .header__burger-menu{
+    width: 15px; height: 15px;
+  background: url("../images/common/common-icons.png") -118px -81px;
+    
+  }
 }
 .container {
 }
+.header__nav-box{
+  margin-left: 30%; 
+}
 .heaader__nav {
+ 
 }
 .heaader__nav-items {
+ 
 }
 .heaader__nav-item {
+  
 }
 .heaader__nav-item-link {
+  text-transform: uppercase;
+  @include fz32;
 }
 .heaader__nav-item-extra {
+  float: right;
+  display: flex; 
 }
 .heaader__nav-item-extra-point {
+  font-size: 16px;
 }
 .header__social-block {
+  display: flex;
  }
 .header__social-item {
   
