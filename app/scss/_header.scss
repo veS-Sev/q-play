@@ -1,17 +1,11 @@
-.header {
-}
 .header__inner {
   display: flex;
   padding: 20px 0;
   align-items: center;
   justify-content: space-between;
 }
-.header__logo-menu-wrapper{
-display: flex;
-}
-.header__logo {
-}
-.header__logo-img {
+.header__logo-menu-wrapper {
+  display: flex;
 }
 button.header__burger-menu {
   margin-left: 5px;
@@ -26,98 +20,182 @@ button.header__burger-menu {
   width: 18px;
   height: 1px;
   background-color: #fff;
-  &:last-child{
+  &:last-child {
     width: 12px;
   }
 }
-.heaader__nav-wrapper {
-  display:none;
-  position: absolute;
-  z-index:100;
-  top:0;
-  bottom:0;
+.header__nav-wrapper {
+   position: absolute;
+  height: 100vh;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
   right: 0;
-  left:0;
+  left: 0;
   background-color: #000;
-  .header__burger-menu{
-    width: 15px; height: 15px;
-  background: url("../images/common/common-icons.png") -118px -81px;
-    
+    .header__burger-menu {
+    margin-top: 3px;
+    width: 15px;
+    height: 15px;
+    background: url("../images/common/common-icons.png") -118px -81px;
+  }
+  .header__logo-menu-wrapper {
+    margin-top: 26px;
   }
 }
-.container {
+.header__nav-box {
+  margin-left: 30%;
 }
-.header__nav-box{
-  margin-left: 30%; 
+.header__nav-item {
+  width: fit-content;
+  display: flex;
+  align-items: center;
 }
-.heaader__nav {
- 
+.header__nav-item + .header__nav-item {
+  margin-top: 25px;
 }
-.heaader__nav-items {
- 
-}
-.heaader__nav-item {
-  
-}
-.heaader__nav-item-link {
+.header__nav-item-link {
   text-transform: uppercase;
   @include fz32;
+  padding-left: 18px;
+  position: relative;
+  margin-right: 20px;
+  width: fit-content;
+  &:hover {
+    color: $accent;
+    transition: 0.5s;
+    &::before {
+      @include be-af;
+      left: 0;
+      top: 50%;
+      width: 10px;
+      height: 11px;
+      background: url("../images/common/common-icons.png") -81px -116px;
+      transform: translateY(-50%);
+      transition: 0.6s;
+    }
+  }
 }
-.heaader__nav-item-extra {
-  float: right;
-  display: flex; 
+
+.header__nav-items-extra {
+  display: flex;
+  text-transform: capitalize;
+  justify-content: start;
 }
-.heaader__nav-item-extra-point {
+.header__nav-item-extra-point {
   font-size: 16px;
+  margin-left: 20px;
+  display: flex;
+}
+.header__nav-item-extra-point + .header__nav-item-extra-point {
+  margin-left: 20px;
+}
+.header__nav-item-extra-point-link {
+  color: $box;
+  &:hover,
+  &:focus {
+    color: #fff;
+    transition: 0.5s;
+  }
+  &:active {
+    color: $accent;
+    transition: 0.5s;
+  }
+}
+.header__social-item-phone {
+  display: flex;
+  align-items: center;
 }
 .header__social-block {
+  max-width: 230px;
   display: flex;
- }
-.header__social-item {
-  
+  padding: 45px 0 50px 18px;
+  align-items: center;
 }
+
+.header__social-item {
+  margin-left: 15px;
+  display: flex;
+}
+
 .header__social-link-VK {
- @include vk;
+  @include vk;
 }
 .header__social-link-Instagram {
- @include insta; 
+  @include insta;
 }
 .header__social-link-Be {
-@include be;
+  @include be;
 }
 .header__social-link-Facebook {
- @include facebook;
+  @include facebook;
 }
+.header__contacts-wrap{
+  max-width:220px;
+  width: 100%;
+}
+.header__contacts{
+  @include ring;
+
+}
+.header__address {
+ @include local;
+ margin-top: 35px;
+}
+.header__working {
+  @include clock;
+  margin-top: 35px;
+}
+.header__working-online-check{
+  @include online;
+}
+.header__contacts,
+.header__address,
+.header__working{
+  @include contacts;
+  margin-left: 18px;
+  &::before{
+    top:5px;
+  }
+}
+
 .header__phone {
-  width: 42px; 
+  width: 42px;
   height: 42px;
-  background: url('../images/common/common-icons.png') -10px -10px;
+  background: url("../images/common/common-icons.png") -10px -10px;
 }
 .bg-clock {
-  width: 16px; height: 17px;
-  background: url('css_sprites.png') -118px -44px;
+  width: 16px;
+  height: 17px;
+  background: url("css_sprites.png") -118px -44px;
 }
 .bg-map_pin {
-  width: 16px; height: 17px;
-  background: url('css_sprites.png') -10px -116px;
+  width: 16px;
+  height: 17px;
+  background: url("css_sprites.png") -10px -116px;
 }
 .bg-phone_ring {
-  width: 15px; height: 16px;
-  background: url('css_sprites.png') -46px -116px;
+  width: 15px;
+  height: 16px;
+  background: url("css_sprites.png") -46px -116px;
 }
 .bg-phone {
-  width: 42px; height: 42px;
-  background: url('css_sprites.png') -10px -10px;
+  width: 42px;
+  height: 42px;
+  background: url("css_sprites.png") -10px -10px;
 }
 .bg-indication {
-  width: 10px; height: 11px;
-  background: url('css_sprites.png') -81px -116px;
+  width: 10px;
+  height: 11px;
+  background: url("css_sprites.png") -81px -116px;
 }
 .bg-close {
-  width: 15px; height: 15px;
-  background: url('css_sprites.png') -118px -81px;
+  width: 15px;
+  height: 15px;
+  background: url("css_sprites.png") -118px -81px;
 }
 .bg-vk {
-  width: 24px; height: 14px;
-  background: url('css_sprites.png') -118px -10px;
+  width: 24px;
+  height: 14px;
+  background: url("css_sprites.png") -118px -10px;
 }

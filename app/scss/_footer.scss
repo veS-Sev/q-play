@@ -15,41 +15,21 @@ h4.footer__title {
   margin:0 50px 0 0;
 }
 .footer__contacts {
-  &::before {
-    @include icon;
-    background: url("../images/common/common-icons.png") -46px -116px;
-  }
+  @include ring;
 }
 .footer__contacts,
 .footer__address,
 .footer__working {
-  width: 100%;
-  padding: 0 0 0 25px;
-  position: relative;
+  @include contacts;
+  &::before{
+    top:10px;
+  }
 }
 .footer__address {
-   &::before {
-    @include icon;
-    background: url("../images/common/common-icons.png") -10px -116px;
-  }
+  @include local;
 }
 .footer__working {
-  &::before {
-    @include icon;
-    background: url("../images/common/common-icons.png") -118px -44px;
-  }
-}
-.footer__working-hours {
-}
-.footer__working-online {
-}
-.footer__working-online-check {
-  display:inline-block;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color:green;
-  margin:0 10px;
+  @include clock;
 }
 .footer__social-box {
   padding-left: 25px;
@@ -59,9 +39,6 @@ h4.footer__title {
 .footer__social-list {
   display: flex;
   justify-content: flex-end;
-}
-.footer__social-item {
-
 }
 .footer__social-item + .footer__social-item {
   margin-left: 20px;

@@ -34,6 +34,51 @@ position:absolute;
   font-size: 16px;
   line-height: 27px;
 }
+ // for contacts
+@mixin contacts{
+  width: 100%;
+  padding: 0 0 0 25px;
+  position: relative;
+}
+
+// for contact icons
+@mixin icon{
+  @include be-af;
+  left:0;
+   width: 16px; height: 17px;
+}
+@mixin ring{
+  position:relative;
+  &::before {
+    @include icon;
+    background: url("../images/common/common-icons.png") -46px -116px;
+  }
+} 
+@mixin local{
+  position:relative;
+  &::before {
+    @include icon;
+    background: url("../images/common/common-icons.png") -10px -116px;
+  }
+}
+@mixin clock{
+  position:relative;
+  &::before {
+    @include icon;
+    background: url("../images/common/common-icons.png") -118px -44px;
+  }
+}
+
+// for online check working
+@mixin online{
+display:inline-block;
+width: 5px;
+height: 5px;
+border-radius: 50%;
+background-color:green;
+margin:0 10px;
+}
+
 // for social-links
 @mixin vk{
   width: 24px; height: 14px;
@@ -51,10 +96,4 @@ position:absolute;
   width: 24px; height: 24px;
   background: url('../images/common/common-icons.png') -10px -72px;
  
-}
-@mixin icon{
-  @include be-af;
-  left:0;
-  top:10px;
-  width: 16px; height: 17px;
 }

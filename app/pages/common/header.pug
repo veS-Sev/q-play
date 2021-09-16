@@ -1,4 +1,5 @@
-header.header 
+-var section='header'
+eader.header 
     .header__inner.container
       .header__logo-menu-wrapper
         a.header__logo: img.header__logo-img(src='images/common/logo.svg')
@@ -6,32 +7,40 @@ header.header
           .header__burger-menu-line 
           .header__burger-menu-line
           .header__burger-menu-line 
-      .heaader__nav-wrapper
+      .header__nav-wrapper
         .container
           .header__logo-menu-wrapper
             a.header__logo: img.header__logo-img(src='images/common/logo.svg')
             button(type='button').header__burger-menu
           .header__nav-box
-            nav.heaader__nav 
-              ul.heaader__nav-items 
-                li.heaader__nav-item
-                  a(href="#" class='heaader__nav-item-link') Портфолио
-                li.heaader__nav-item
-                  a(href="#" class='heaader__nav-item-link') Фото и 3D
-                li.heaader__nav-item
-                  a(href="#" class='heaader__nav-item-link') Бриф
-                    ul.heaader__nav-item-extra
-                      li.heaader__nav-item-extra-point Фирменный стиль                     
-                      li.heaader__nav-item-extra-point Логотип 
-                      li.heaader__nav-item-extra-point Упаковка
-                      li.heaader__nav-item-extra-point Сайт
-                      li.heaader__nav-item-extra-point Дизайн макет  
-                li.heaader__nav-item
-                  a(href="#" class='heaader__nav-item-link') Вопросы
-                li.heaader__nav-item
-                  a(href="#" class='heaader__nav-item-link')  For free 
+            nav.header__nav 
+              ul.header__nav-items 
+                li.header__nav-item
+                  a(href="#" class='header__nav-item-link') Портфолио
+                li.header__nav-item
+                  a(href="#" class='header__nav-item-link') Фото и 3D
+                li.header__nav-item
+                  a(href="#" class='header__nav-item-link' id="header-bref-link") Бриф
+                  ul.header__nav-items-extra
+                    li.header__nav-item-extra-point: a(href="#").header__nav-item-extra-point-link Фирменный стиль                     
+                    li.header__nav-item-extra-point: a(href="#").header__nav-item-extra-point-link Логотип 
+                    li.header__nav-item-extra-point: a(href="#").header__nav-item-extra-point-link Упаковка
+                    li.header__nav-item-extra-point: a(href="#").header__nav-item-extra-point-link Сайт
+                    li.header__nav-item-extra-point: a(href="#").header__nav-item-extra-point-link Дизайн макет  
+                li.header__nav-item
+                  a(href="#" class='header__nav-item-link') Вопросы
+                li.header__nav-item
+                  a(href="#" class='header__nav-item-link')  For free 
             ul.header__social-block
               li(class='header__social-item-phone')
                 a(href="tel:88009878830").header__phone
               +socialLinks('header')
+            .header__contacts-wrap
+              .header__contacts
+                a(class=section+'__contacts-tel' href="#") +7 (846) 990 05 77
+                a(class=section+'__contacts-email' href="#") design@q-play.pro
+              address(class=section+'__address') Наш адрес:  г. Самара,<br>ул. Конноармейская, 17 
+              div(class=section+'__working') 
+                  div(class=section+'__working-hours') Режим работы:<br> 9.00 - 18.00
+                  div(class=section+'__working-online') <span class="header__working-online-check"></span>сейчас работаем      
       a(href="tel:88009878830").header__phone

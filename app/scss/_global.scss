@@ -82,3 +82,11 @@ ul{
  margin-block-start:0;
  margin-block-end:0;
 }
+.working__online-check {
+  display:inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color:green;
+  margin:0 10px;
+}
