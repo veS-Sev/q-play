@@ -4,21 +4,36 @@ $(function () {
 
   $('.header__burger-menu').click(() => {
     $('.header__nav-wrapper').toggleClass('active').toggle('slow');
+    blockBody($('.header__nav-wrapper'), 'active')
     checkStatus()
   });
-  checkStatus();
+
   $('#header-bref-link').click((event) => {
     $(event.target).siblings().toggle('slow', function () {});
-    });
- 
-  function checkStatus(){
-    if($('.header__nav-wrapper').not('active')){
-      $('#header-bref-link').siblings().css('display','none');
-         }
-      };
- 
+  });
 
+  function checkStatus() {
+    if ($('.header__nav-wrapper').not('active')) {
+      $('#header-bref-link').siblings().css('display', 'none');
+    }
+  };
 
+  function blockBody(someElement, someClass) {
+    if (someElement.hasClass(someClass)) {
+      $('body').css('overflow', 'hidden');
+    } else {
+      $('body').css('overflow', 'auto');
+    }
+  }
+
+  $('#banner-btn').click(() => {
+    $('#modal__request').addClass('active').toggle('slow');
+    blockBody($('.modal__request'), 'active');
+  });
+  $('.request__close').click(() => {
+    $('#modal__request').removeClass('active').toggle('slow');
+    blockBody($('.modal__request'), 'active');
+  })
   // let textareas = document.querySelectorAll('textarea');
   // for (var i = 0; i < textareas.length; i++) {
   //   textareas[i].setAttribute('style', 'height:' + (textareas[i].scrollHeight) + 'px;overflow-y:hidden;');

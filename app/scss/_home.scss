@@ -2,8 +2,6 @@
 .features {
   padding: 100px 0  150px 0;
 }
-.container {
-}
 .features__title {
   margin-bottom: 40px;
 }
@@ -67,8 +65,6 @@
   color: $accent;
   @include fz48;
 }
-.achievements__text {
-}
 // achievements end
 
 // banner start
@@ -118,8 +114,7 @@
   right: 0;
   padding: 77px 0;
   color: #000;
-  .container {
-  }
+
 }
 h3.banner__title {
   max-width: 500px;
@@ -140,8 +135,6 @@ h3.banner__title {
 // clients start
 .clients {
   padding: 150px 0;
-}
-.clients__title {
 }
 .clients__inner {
   display: flex;
@@ -226,3 +219,92 @@ h3.banner__title {
   background: url("../images/home/clients/clients-logo-all.png") 152px 56px;
 }
 // clients end
+
+// modal start
+.modal__request{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:#000;
+  z-index:100;
+  display:none;
+}
+
+.request__logo-menu-wrapper {
+ margin-top: 26px;
+ margin-bottom: 200px;
+}
+.request__logo {
+  display: flex;
+}
+
+.request__close{
+  width: 15px;
+  height: 15px;
+  background: url("../images/common/common-icons.png") -118px -81px;
+}
+.request__inner-wrap {background-color: red;
+  height: 440px;
+  position: relative;
+}
+.request__canvas-wrap{
+  height: 440px;
+  width: 100%;
+}
+.request__inner {
+  position:absolute;
+  top:0;
+  bottom:0;
+  right: 0;
+  left:0;
+  z-index:200;
+  padding:50px 0;
+}
+.request__inner-box{
+  color:#000;
+  max-width:570px;
+  width: 100%;
+
+ }
+.request__form {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+.request__name,
+.request__email,
+.request__tel,
+.request__form-submit {
+ max-width: calc(50% - 17.5px);
+ width: 100%;
+ height: 56px; 
+ margin-bottom: 35px;
+ box-sizing: border-box;
+
+}
+.request__name,
+.request__email,
+.request__tel {
+ background-color: transparent;
+ border:1px solid #000;
+ padding:19px;
+ &::placeholder{
+   color:#000;
+ }
+}
+.request__form-submit {
+background-color: #000;
+color:#fff;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+.request__form-note {
+  @include fz14;
+span{
+  text-decoration: underline;
+}
+}
+// modal end

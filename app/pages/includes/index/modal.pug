@@ -1,0 +1,18 @@
+-var section = 'request';
+.modal__request#modal__request
+  .container 
+    +logo 
+  .request__inner-wrap
+    .request__canvas-wrap
+    //- canvas.banner__bgr-canvas#banner__bgr-canvas(width="2px" height="2px")
+    .request__inner 
+      .container
+        .request__inner-box
+          h3.request__title НАЧНИТЕ СВОЙ ПРОЕКТ УЖЕ СЕГОДНЯ
+          form.request__form
+            +modalInput('name','text','Ваше имя')
+            +modalInput('email','email','E-mail')
+            +modalInput('tel','text','Телефон')
+            button(type="submit" class=section+'__form-submit') Отправить
+          div(class=section+'__form-note')  Нажимая на кнопку, вы даете <span> согласие </span> на обработку персональных данных и соглашаетесь с политикой конфиденциальности.
+          

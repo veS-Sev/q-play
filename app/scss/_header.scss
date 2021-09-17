@@ -25,7 +25,8 @@ button.header__burger-menu {
   }
 }
 .header__nav-wrapper {
-   position: absolute;
+  display:none;
+   position: fixed;
   height: 100vh;
   z-index: 100;
   top: 0;
@@ -163,39 +164,4 @@ button.header__burger-menu {
   width: 42px;
   height: 42px;
   background: url("../images/common/common-icons.png") -10px -10px;
-}
-.bg-clock {
-  width: 16px;
-  height: 17px;
-  background: url("css_sprites.png") -118px -44px;
-}
-.bg-map_pin {
-  width: 16px;
-  height: 17px;
-  background: url("css_sprites.png") -10px -116px;
-}
-.bg-phone_ring {
-  width: 15px;
-  height: 16px;
-  background: url("css_sprites.png") -46px -116px;
-}
-.bg-phone {
-  width: 42px;
-  height: 42px;
-  background: url("css_sprites.png") -10px -10px;
-}
-.bg-indication {
-  width: 10px;
-  height: 11px;
-  background: url("css_sprites.png") -81px -116px;
-}
-.bg-close {
-  width: 15px;
-  height: 15px;
-  background: url("css_sprites.png") -118px -81px;
-}
-.bg-vk {
-  width: 24px;
-  height: 14px;
-  background: url("css_sprites.png") -118px -10px;
 }

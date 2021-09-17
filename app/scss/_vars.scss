@@ -34,6 +34,10 @@ position:absolute;
   font-size: 16px;
   line-height: 27px;
 }
+@mixin fz14{
+  font-size: 14px;
+  line-height: 27px;
+}
  // for contacts
 @mixin contacts{
   width: 100%;
