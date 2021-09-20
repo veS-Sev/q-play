@@ -230,6 +230,7 @@ h3.banner__title {
   background-color:#000;
   z-index:100;
   display:none;
+  max-height: 100%;
 }
 
 .request__logo-menu-wrapper {
@@ -241,19 +242,27 @@ h3.banner__title {
 }
 
 .request__close{
+  margin-left: 5px;
   width: 15px;
   height: 15px;
   background: url("../images/common/common-icons.png") -118px -81px;
 }
-.request__inner-wrap {background-color: red;
+.request__inner-wrap {
+  background: $accent;
   height: 440px;
   position: relative;
 }
 .request__canvas-wrap{
   height: 440px;
   width: 100%;
+  overflow:hidden;
+}
+.request__bgr-canvas{
+  height: 440px;
+  width: 100%;
 }
 .request__inner {
+  background-color:transparent;
   position:absolute;
   top:0;
   bottom:0;
