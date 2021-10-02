@@ -3,20 +3,20 @@ extends common/layout
 block variables
   include includes/brif/variables-brif
 
-block content 
-  form.brif__form#brif-form
-    .brif__container 
-      block page-1
-        include includes/brif/brif-form-page-1
-      block page-2
-        include includes/brif/brif-form-page-2
-      block page-3
-        include includes/brif/brif-form-page-3
-      block page-4
-        include includes/brif/brif-form-page-4
-      div(class='brif__page-btn-wrap')
-        button(class='brif__page-prev' id="prevBtn" type='button' onclick='nextPrev(-1)') Назад
-        button(class='brif__page-next' id='nextBtn' type='button' onclick='nextPrev(1)') Вперед
+//- block content 
+//-   form.brif__form#brif-form
+//-     .brif__container 
+//-       block page-1
+//-         include includes/brif/brif-form-page-1
+//-       block page-2
+//-         include includes/brif/brif-form-page-2
+//-       block page-3
+//-         include includes/brif/brif-form-page-3
+//-       block page-4
+//-         include includes/brif/brif-form-page-4
+//-       div(class='brif__page-btn-wrap')
+//-         button(class='brif__page-prev' id="prevBtn" type='button' onclick='nextPrev(-1)') Назад
+//-         button(class='brif__page-next' id='nextBtn' type='button' onclick='nextPrev(1)') Вперед
 block scripts 
   script(src="js/main.min.js")
   script(src="js/main.js")

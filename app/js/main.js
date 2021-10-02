@@ -4,7 +4,9 @@ $(function () {
 
   $('.header__burger-menu').click(() => {
     $('.header__nav-wrapper').toggleClass('active').toggle('slow');
-    blockBody($('.header__nav-wrapper'), 'active')
+    $('.header__burger-menu').toggleClass('active-btn');
+    $('.header__phone').eq(1).toggle('slow');
+    blockBody($('.header__nav-wrapper'), 'active');
     checkStatus();
   });
 
@@ -14,8 +16,9 @@ $(function () {
 
   function checkStatus() {
     if ($('.header__nav-wrapper').not('active')) {
-      $('#header-bref-link').siblings().css('display', 'none');
+     $('#header-bref-link').siblings().css('display', 'none');
     }
+
   };
 
   function blockBody(someElement, someClass) {
@@ -77,54 +80,54 @@ $(function () {
 });
 
 // TABS
-let prevBtn = document.getElementById("prevBtn"),
-  nextBtn = document.getElementById("nextBtn"),
-  tabs = document.getElementsByClassName("tab");
+// let prevBtn = document.getElementById("prevBtn"),
+//   nextBtn = document.getElementById("nextBtn"),
+//   tabs = document.getElementsByClassName("tab");
 
-var currentTab = 0; // Текущая вкладка будет первой вкладкой (0)
-showTab(currentTab); // Отображение текущей вкладки
+// var currentTab = 0; // Текущая вкладка будет первой вкладкой (0)
+// showTab(currentTab); // Отображение текущей вкладки
 
 
-function showTab(n) {
-  // Эта функция отобразит указанную вкладку формы ...
-  // var x = document.getElementsByClassName("tab");
-  // console.log(x);
-  tabs[n].style.display = "block";
-  console.log(tabs[n]);
-  console.log(prevBtn);
-  // ... и зафиксируйте кнопки Назад/Вперед:
-  if (n == 0) {
-    prevBtn.style.display = "none";
-  } else {
-    prevBtn.style.display = "inline";
-  }
-  if (n == (tabs.length - 1)) {
-    nextBtn.innerHTML = "Отправить";
-  } else {
-    nextBtn.innerHTML = "Вперед";
-  }
-}
+// function showTab(n) {
+//   // Эта функция отобразит указанную вкладку формы ...
+//   // var x = document.getElementsByClassName("tab");
+//   // console.log(x);
+//   tabs[n].style.display = "block";
+//   console.log(tabs[n]);
+//   console.log(prevBtn);
+//   // ... и зафиксируйте кнопки Назад/Вперед:
+//   if (n == 0) {
+//     prevBtn.style.display = "none";
+//   } else {
+//     prevBtn.style.display = "inline";
+//   }
+//   if (n == (tabs.length - 1)) {
+//     nextBtn.innerHTML = "Отправить";
+//   } else {
+//     nextBtn.innerHTML = "Вперед";
+//   }
+// }
 
-function nextPrev(n) {
-  // Эта функция определит, какую вкладку отображать
-  // var x = document.getElementsByClassName("tab");
-  // console.log(x);
-  // Выйдите из функции, если какое-либо поле на вкладке текущий является недопустимым:
-  // if (n == 1 && !validateForm()) return false;
-  // if (n == 1) return false;
-  // Скрыть текущую вкладку:
-  tabs[currentTab].style.display = "none";
-  // Увеличение или уменьшение текущей вкладки на 1:
-  currentTab = currentTab + n;
-  // если вы дошли до конца формы... :
-  if (currentTab >= tabs.length) {
-    //...форма будет отправлена:
-    document.getElementById("brif-form").submit();
-    return false;
-  }
-  // В противном случае отобразите правильную вкладку:
-  showTab(currentTab);
-}
+// function nextPrev(n) {
+//   // Эта функция определит, какую вкладку отображать
+//   // var x = document.getElementsByClassName("tab");
+//   // console.log(x);
+//   // Выйдите из функции, если какое-либо поле на вкладке текущий является недопустимым:
+//   // if (n == 1 && !validateForm()) return false;
+//   // if (n == 1) return false;
+//   // Скрыть текущую вкладку:
+//   tabs[currentTab].style.display = "none";
+//   // Увеличение или уменьшение текущей вкладки на 1:
+//   currentTab = currentTab + n;
+//   // если вы дошли до конца формы... :
+//   if (currentTab >= tabs.length) {
+//     //...форма будет отправлена:
+//     document.getElementById("brif-form").submit();
+//     return false;
+//   }
+//   // В противном случае отобразите правильную вкладку:
+//   showTab(currentTab);
+// };
 
 // function validateForm() {
 //   // Эта функция занимается проверкой полей формы

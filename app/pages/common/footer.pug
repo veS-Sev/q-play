@@ -9,7 +9,9 @@ footer.footer
       address(class=section+'__address') Наш адрес:  г. Самара, ул. Конноармейская, 17 
       div(class=section+'__working') 
         div(class=section+'__working-hours') Режим работы: 9.00 - 18.00
-        div(class=section+'__working-online') <span class="working__online-check"></span>сейчас работаем
+        div(class=section+'__online-wrap')
+          div(class=section+'__online-indicator')
+          div(class=section+'__working-text')
       .footer__social-box
         ul.footer__social-list
           +socialLinks('footer')  

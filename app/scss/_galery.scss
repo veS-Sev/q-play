@@ -40,3 +40,33 @@ div[class^="galery__inner-"] {
   display: block;
   margin: 0 auto;
 }
+
+// media
+@media(max-width:1000px){
+  .galery__nav-btn {
+    padding: 25px 10px;
+  font-size: 20px;
+  }
+}
+
+@media(max-width:750px){
+  .galery__nav{
+    flex-wrap: wrap;
+  }
+  .galery__item-link{
+    max-width: 50%;
+  }
+  .galery__nav-btn{
+    max-width:50%;
+    padding: 25px 10px;
+     }
+ }
+@media(max-width:550px){
+  .galery__item-link{
+    max-width: 100%;
+  }
+  .galery__nav-btn +
+  .galery__nav-btn {
+    padding-top:10px;
+      }
+}
