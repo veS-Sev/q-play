@@ -3,10 +3,6 @@ $gray:#4F4F4F;
 $dgray:#828282;
 $lgray:#C4C4C4; 
 $box:#666;
-// 828282
-// C4C4C4
-// BDBDBD
-// E0E0E0
 
 @mixin be-af{
 content:"";
@@ -80,6 +76,7 @@ position:absolute;
     background: url("../images/common/common-icons.png") -118px -44px;
   }
 }
+// 
 
 // for online check working
 @mixin online{

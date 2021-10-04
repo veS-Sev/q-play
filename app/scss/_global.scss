@@ -49,7 +49,7 @@ button{
   flex-direction: column;
   min-height: 100%;
 }
-.content {
+.content__fluid {
   flex: 1 0 auto;
 }
 .footer {
@@ -63,6 +63,8 @@ button{
 }
 .container-fluid{
   max-width: 1920px;
+  width: 100%;
+  margin:0 auto;
 }
 li[class$="__social-item"]{
   font-size: 0;

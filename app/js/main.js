@@ -48,6 +48,7 @@ $(function () {
   //   this.style.height = 'auto';
   //   this.style.height = (this.scrollHeight) + 'px';
   // };
+  // for textareas hight
   document.querySelectorAll('textarea').forEach((elem) => {
     elem.style.height = elem.scrollHeight + 10 + "px";
     elem.addEventListener('input', (e) => {
@@ -57,12 +58,29 @@ $(function () {
       e.target.style.color = 'red';
     })
   })
-  
+  // 
+
+  // for  working time indicator
+  console.log(Date());
+  let x = new Date();
+  let weekDay =x.getDay();
+  let time=x.getHours();
+  let indicator = document.querySelector('.footer__online-indicator');
+  let indicatorText = document.querySelector('.footer__working-text');
+  function getIndicator(){
+  if((weekDay==0 || weekDay==6)&& time<9 || time>17){
+    indicator.style.backgroundColor='red';
+    indicatorText.textContent='сейчас отдыхаем';
+  }else{
+    indicator.style.backgroundColor='green';
+    indicatorText.textContent='сейчас работаем';
+  }};
+  getIndicator();
+  // 
   let files = document.querySelector('#brif__addfile');
   let field = document.querySelector('#field');
   let addBtn = document.getElementById('brif__addfile-btn');
-  
-  
+    
   addBtn.addEventListener('click', () => files.click());
   files.addEventListener('change', function () {
     field.textContent += this.value;

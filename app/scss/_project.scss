@@ -1,0 +1,14 @@
+
+.top__project{
+
+background-repeat: no-repeat;
+background: radial-gradient(ellipse at 25% 50%, rgba($accent, 0.25),#000,#000, #000);
+padding: 20px;
+
+}
+
+img[class^="overview__item-img-"]{
+object-fit: contain;
+max-width:100%;
+width: 100%;
+}
