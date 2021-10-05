@@ -1,5 +1,5 @@
 .footer {
-  padding-bottom:150px;
+  padding-bottom:50px;
   .container {
     display: flex;
     align-items: flex-start;
@@ -48,7 +48,8 @@ h4.footer__title {
 }
 .footer__social-list {
   display: flex;
-  justify-content: flex-end;
+  max-height:30px;
+  border-bottom:1px solid rgba(#fff, 0.5); 
 }
 .footer__social-item + .footer__social-item {
   margin-left: 20px;
@@ -74,9 +75,7 @@ padding-bottom:130px;
   }
   .footer__inner{
     flex-wrap:wrap;
-    // margin-left: -50px;
     justify-content: center;
-    
   }
   .footer__contacts-email{
     display: block;
