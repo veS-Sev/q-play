@@ -38,6 +38,18 @@ $(function () {
     blockBody($('.modal__request'), 'active');
   });
 
+  
+  // DELETE VERTICAL SCROLL FOR TEXTAREAS
+  document.querySelectorAll('textarea').forEach((elem) => {
+    elem.style.height = elem.scrollHeight + 10 + "px";
+    elem.addEventListener('input', (e) => {
+      e.target.style.height = e.target.scrollHeight + 10 + "px";
+      console.log(e.target);
+      e.target.style.height = 'auto';
+      e.target.style.color = 'red';
+    })
+  })
+
   // let textareas = document.querySelectorAll('textarea');
   // for (var i = 0; i < textareas.length; i++) {
   //   textareas[i].setAttribute('style', 'height:' + (textareas[i].scrollHeight) + 'px;overflow-y:hidden;');
@@ -48,16 +60,6 @@ $(function () {
   //   this.style.height = 'auto';
   //   this.style.height = (this.scrollHeight) + 'px';
   // };
-  // for textareas hight
-  document.querySelectorAll('textarea').forEach((elem) => {
-    elem.style.height = elem.scrollHeight + 10 + "px";
-    elem.addEventListener('input', (e) => {
-      e.target.style.height = e.target.scrollHeight + 10 + "px";
-      console.log(e.target);
-      e.target.style.height = 'auto';
-      e.target.style.color = 'red';
-    })
-  })
   // 
 
   // for  working time indicator
@@ -76,7 +78,7 @@ $(function () {
     indicatorText.textContent='сейчас работаем';
   }};
   getIndicator();
-  // 
+  // LIMIT TO DOWNLOAD
   let files = document.querySelector('#brif__addfile');
   let field = document.querySelector('#field');
   let addBtn = document.getElementById('brif__addfile-btn');
@@ -97,74 +99,82 @@ $(function () {
   });
 });
 
+// MIXITUP CATEGORY LOAD
+let currentlyWidth = document.body.clientWidth;
+let container2 = document.querySelector('.galery__home');
+
+  function getCategory(x1, x2) {
+    return (currentlyWidth < 701) ? `.category-${x2}` : `.category-${x1}`;
+  };
+
 // TABS
-// let prevBtn = document.getElementById("prevBtn"),
-//   nextBtn = document.getElementById("nextBtn"),
-//   tabs = document.getElementsByClassName("tab");
+let prevBtn = document.getElementById("prevBtn"),
+  nextBtn = document.getElementById("nextBtn"),
+  tabs = document.getElementsByClassName("tab");
 
-// var currentTab = 0; // Текущая вкладка будет первой вкладкой (0)
-// showTab(currentTab); // Отображение текущей вкладки
+var currentTab = 0; // Текущая вкладка будет первой вкладкой (0)
+showTab(currentTab); // Отображение текущей вкладки
 
 
-// function showTab(n) {
-//   // Эта функция отобразит указанную вкладку формы ...
-//   // var x = document.getElementsByClassName("tab");
-//   // console.log(x);
-//   tabs[n].style.display = "block";
-//   console.log(tabs[n]);
-//   console.log(prevBtn);
-//   // ... и зафиксируйте кнопки Назад/Вперед:
-//   if (n == 0) {
-//     prevBtn.style.display = "none";
-//   } else {
-//     prevBtn.style.display = "inline";
-//   }
-//   if (n == (tabs.length - 1)) {
-//     nextBtn.innerHTML = "Отправить";
-//   } else {
-//     nextBtn.innerHTML = "Вперед";
-//   }
-// }
+function showTab(n) {
+  // Эта функция отобразит указанную вкладку формы ...
+  // var x = document.getElementsByClassName("tab");
+  // console.log(x);
+  tabs[n].style.display = "block";
+  console.log(tabs[n]);
+  console.log(prevBtn);
+  // ... и зафиксируйте кнопки Назад/Вперед:
+  if (n == 0) {
+    prevBtn.style.display = "none";
+  } else {
+    prevBtn.style.display = "inline";
+  }
+  if (n == (tabs.length - 1)) {
+    nextBtn.innerHTML = "Отправить";
+  } else {
+    nextBtn.innerHTML = "Вперед";
+  }
+}
 
-// function nextPrev(n) {
-//   // Эта функция определит, какую вкладку отображать
-//   // var x = document.getElementsByClassName("tab");
-//   // console.log(x);
-//   // Выйдите из функции, если какое-либо поле на вкладке текущий является недопустимым:
-//   // if (n == 1 && !validateForm()) return false;
-//   // if (n == 1) return false;
-//   // Скрыть текущую вкладку:
-//   tabs[currentTab].style.display = "none";
-//   // Увеличение или уменьшение текущей вкладки на 1:
-//   currentTab = currentTab + n;
-//   // если вы дошли до конца формы... :
-//   if (currentTab >= tabs.length) {
-//     //...форма будет отправлена:
-//     document.getElementById("brif-form").submit();
-//     return false;
-//   }
-//   // В противном случае отобразите правильную вкладку:
-//   showTab(currentTab);
-// };
+function nextPrev(n) {
+  // Эта функция определит, какую вкладку отображать
+  // var x = document.getElementsByClassName("tab");
+  // console.log(x);
+  // Выйдите из функции, если какое-либо поле на вкладке текущий является недопустимым:
+  // if (n == 1 && !validateForm()) return false;
+  // if (n == 1) return false;
+  // Скрыть текущую вкладку:
+  tabs[currentTab].style.display = "none";
+  // Увеличение или уменьшение текущей вкладки на 1:
+  currentTab = currentTab + n;
+  // если вы дошли до конца формы... :
+  if (currentTab >= tabs.length) {
+    //...форма будет отправлена:
+    document.getElementById("brif-form").submit();
+    return false;
+  }
+  // В противном случае отобразите правильную вкладку:
+  showTab(currentTab);
+};
 
-// function validateForm() {
-//   // Эта функция занимается проверкой полей формы
-//   var x, y, i, valid = true;
-//   x = document.getElementsByClassName("tab");
-//   y = x[currentTab].getElementsByTagName("input");
-//   // Цикл, который проверяет каждое поле ввода на текущей вкладке:
-//   for (i = 0; i < y.length; i++) {
-//     // Если поле пустое...
-//     if (y[i].value == "") {
-//       // добавьте в поле "invalid" класс:
-//       y[i].className += " invalid";
-//       // и установите текущий допустимый статус в false:
-//       valid = false;
-//     }
-//   }
-//   // Если действительный статус равен true, отметьте шаг как завершенный и действительный:
-//   if (valid) {
-//     document.getElementsByClassName("step")[currentTab].className += " finish";
-//   }
-//   return valid; // верните действительный статус
-// }
+function validateForm() {
+  // Эта функция занимается проверкой полей формы
+  var x, y, i, valid = true;
+  x = document.getElementsByClassName("tab");
+  y = x[currentTab].getElementsByTagName("input");
+  // Цикл, который проверяет каждое поле ввода на текущей вкладке:
+  for (i = 0; i < y.length; i++) {
+    // Если поле пустое...
+    if (y[i].value == "") {
+      // добавьте в поле "invalid" класс:
+      y[i].className += " invalid";
+      // и установите текущий допустимый статус в false:
+      valid = false;
+    }
+  }
+  // Если действительный статус равен true, отметьте шаг как завершенный и действительный:
+  if (valid) {
+    document.getElementsByClassName("step")[currentTab].className += " finish";
+  }
+  return valid; // верните действительный статус
+}

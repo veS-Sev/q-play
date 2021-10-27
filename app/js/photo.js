@@ -5,7 +5,7 @@ $(function(){
         scope: 'local'
     },
         load: {
-        filter: '.category-e'
+        filter: getCategory('e', 'f')
     }
   });
   var container3 = document.querySelector('.products');
